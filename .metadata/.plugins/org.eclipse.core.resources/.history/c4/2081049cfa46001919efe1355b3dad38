@@ -1,0 +1,8 @@
+package Keyword;
+
+public class SuperParent {
+	
+	
+	static int i=10;
+
+}

@@ -1,0 +1,29 @@
+package Keyword;
+
+public class This {
+	
+	
+	int i;
+	String str ;
+	
+	public void display(int i, String str) {
+		
+		System.out.println(i+""+str);
+		
+	}
+	
+	public void show() {
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+      This thi=new This();
+      
+		
+		
+		
+	}
+
+}

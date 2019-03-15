@@ -1,0 +1,22 @@
+package Keyword;
+
+public class This {
+	
+	
+	int i;
+	String str ;
+	
+	public void display() {
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+
+		
+		
+		
+	}
+
+}

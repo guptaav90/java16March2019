@@ -1,0 +1,54 @@
+package Iframe;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Iframe {
+	
+	WebDriver driver;
+	ChromeOptions options;
+	
+  @Test
+  public void f() throws Throwable {
+	  
+	  WebDriverManager.chromedriver().setup();//here we can use this cmd. instead of system.setproperty...
+	  options=new ChromeOptions();//here we can use chromeoptions class object to use hide the header which is appears on the browser... 
+	  options.addArguments("disable-infobars");
+	  driver=new ChromeDriver(options);
+	  driver.manage().window().maximize();
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.get("https://www.freecrm.com/index.html");
+	  
+	  driver.findElement(By.name("username")).sendKeys("avigupta");
+	  driver.findElement(By.name("password")).sendKeys("cspl@2020");
+	  Thread.sleep(2000);
+	  driver.findElement(By.xpath("//input[@type='submit']")).click();
+	  
+	  driver.switchTo().frame(driver.findElement(By.name("mainpanel")));//this code will be use for switch the iframe by using id or name of frame like as webelement to identify the element...
+//	  driver.switchTo().frame("");//this code will be use for switch the iframe by using string "" NAME of frame like as webelement to identify the element...
+	 
+	  
+	  driver.findElement(By.xpath("//a[contains(text(),'Shortlist')]")).click();
+	
+	  driver.switchTo().parentFrame();
+	
+	  driver.switchTo().frame(driver.findElement(By.name("leftpanel")));//this code will be use for switch the iframe by using index of frame like as webelement to identify the element...
+	 
+	  driver.findElement(By.xpath("//input[@type='submit']")).click();
+	  
+	  driver.switchTo().parentFrame();
+//	  driver.switchTo().defaultContent();
+	  
+	  driver.findElement(By.xpath("//a[contains(text(),'Calendar')]")).click();
+	 
+	  
+  }
+}

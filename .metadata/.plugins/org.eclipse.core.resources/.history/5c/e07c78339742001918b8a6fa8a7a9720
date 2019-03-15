@@ -1,0 +1,16 @@
+package constructor;
+
+public class parametrizedConstructor {
+
+	
+public parametrizedConstructor(String empName,int empId) {
+		
+	
+	}
+	public static void main(String[] args) {
+
+
+		
+	}
+
+}

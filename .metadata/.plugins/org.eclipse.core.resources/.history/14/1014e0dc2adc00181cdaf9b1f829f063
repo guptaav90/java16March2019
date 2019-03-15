@@ -1,0 +1,17 @@
+package JavascriptExecutor;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class JavascriptExecutor {
+	
+	
+ 
+	@Test
+  public void f() {
+		
+		WebDriverManager.chromedriver().setup();
+	  
+  }
+}

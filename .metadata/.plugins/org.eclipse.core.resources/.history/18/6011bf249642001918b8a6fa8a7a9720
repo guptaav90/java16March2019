@@ -1,0 +1,13 @@
+package constructor;
+
+public class DefaultConstructor {
+	
+	int EmpID;
+	String EmpName;
+	
+	public void main(String args[])
+	{
+		
+	}
+
+}

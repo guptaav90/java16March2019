@@ -1,0 +1,12 @@
+package string;
+
+public class String_Vs_StringBuffer_EqualsMethod {
+
+	public static void main(String[] args) {
+
+
+		
+		
+	}
+
+}

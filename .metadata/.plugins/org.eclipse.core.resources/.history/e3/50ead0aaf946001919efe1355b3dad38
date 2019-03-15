@@ -1,0 +1,13 @@
+package Keyword;
+
+public class SuperChild {
+	
+	int i=20;
+
+	public static void main(String[] args) {
+
+
+		
+	}
+
+}

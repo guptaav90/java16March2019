@@ -1,0 +1,32 @@
+package string;
+
+public class String_Vs_StringBuffer_EqualsMethod {
+
+	public static void main(String[] args) {
+
+
+		String str1=new String("Selenium");
+		String str2=new String("Selenium");
+		
+		System.out.println(str1.equals(str1));//true
+		
+		if (str1.equals(str2)) {
+			
+			System.out.println("If object of content are same then will return true because in string class of equals method "
+					+ "check object of content, so if same then *TRUE*");
+		} 
+		
+		else 
+		
+		{
+			System.out.println("If object of content are not same then will return false because in string class of equals method "
+					+ "check object of content, so if different then *FALSE*");
+		}
+		
+		
+		
+		
+		
+	}
+
+}

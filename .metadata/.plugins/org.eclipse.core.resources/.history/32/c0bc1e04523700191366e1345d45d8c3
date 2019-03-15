@@ -1,0 +1,19 @@
+package string;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+
+
+		String str1=new String("New");
+		String str2=new String("Technology");
+		String str3=new String("   NEW   ");
+		
+		System.out.println(str1.length());//it will return length of string.
+		System.out.println(str1.concat(str2));//it does concatenationbetween two strings
+		System.out.println(str3.trim());//it will remove spaces from left and right of string.
+		
+		
+	}
+
+}

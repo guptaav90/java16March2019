@@ -1,0 +1,17 @@
+package constructor;
+
+public class UserDefinedConstructor {
+	
+	UserDefinedConstructor()
+	{
+		System.out.println("UserDefinedConstructor");
+	}
+
+	public static void main(String[] args) {
+
+		UserDefinedConstructor =new UserDefinedConstructor();
+		
+		
+	}
+
+}

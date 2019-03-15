@@ -1,0 +1,22 @@
+package Inheritance;
+
+public class B extends A { //this is called single type inheritance, class A is a parent class of B class and
+	//B class is a child class of A
+	
+	public void Internet() {
+		
+		System.out.println("Child class of Internet method");
+	}
+
+	public static void main(String[] args) {
+
+		
+		B b=new B();//HAS-A relation
+		b.Internet();//class B method
+		b.Show();//class A method
+		b.Mirror();//class A method
+		
+	}
+	
+
+}

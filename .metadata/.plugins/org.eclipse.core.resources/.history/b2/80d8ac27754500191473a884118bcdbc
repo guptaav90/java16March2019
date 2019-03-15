@@ -1,0 +1,32 @@
+package Keyword;
+
+public class This {
+	
+	
+	int i=100;
+	String str="Test";
+	
+	public void display(int i, String str) {
+		
+		i=i;
+		
+	}
+	
+	public void show() {
+		
+		System.out.println(i+" '<-Instance Variables->' "+str);
+	}
+
+	public static void main(String[] args) {
+
+      This thi=new This();
+      thi.display(10, "Tom");
+      thi.show();
+      
+      
+		
+		
+		
+	}
+
+}

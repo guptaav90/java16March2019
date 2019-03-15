@@ -1,0 +1,17 @@
+package string;
+
+public class Mmutable {
+
+	public static void main(String[] args) {
+
+
+		 StringBuffer str1=new StringBuffer("Selenium");
+		 str1.append("Automation");
+		 System.out.println(str1);//SeleniumAutomation
+		 
+		 /*
+		
+		*/
+	}
+
+}

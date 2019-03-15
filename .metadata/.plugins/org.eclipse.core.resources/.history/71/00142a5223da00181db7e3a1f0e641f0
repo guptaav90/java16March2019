@@ -1,0 +1,67 @@
+package WindowHandling;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+public class WindowHandling {
+	
+	WebDriver driver;
+	 ChromeOptions options;
+	 
+  @Test
+  public void f() {
+	  
+	  System.setProperty("webdriver.chrome.driver","C:\\New folder\\Avi Gupta\\Automation\\Automation Software\\chromedriver.exe");
+	  options=new ChromeOptions();
+	  options.addArguments("disable-infobars");
+	  driver=new ChromeDriver(options);
+	  driver.manage().window().maximize();
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.get("https://paytmmall.com/");
+	  
+	  //Click on thevibe header which is available on paytm mall page.
+	  driver.findElement(By.xpath("//img[@class='_1n2c']")).click();
+	  
+	  String paytm= driver.getWindowHandle();
+	  System.out.println("1st browser Window ID: "+paytm);
+	  
+	  Set<String> WindowHandling =driver.getWindowHandles();
+	  System.out.println(WindowHandling.size());
+	  System.out.println(WindowHandling);
+	  
+	  for (String window : WindowHandling) {
+	  
+	  if (!paytm.equalsIgnoreCase(window)) {
+		  
+	     driver.switchTo().window(window);
+	     String thevibe=driver.getTitle();
+	     System.out.println(thevibe);     
+	     driver.findElement(By.xpath("//div[@class='top-bar-content']//a[@class='fa fa-facebook']")).click();
+			
+		}
+		  
+	}
+	  
+	  Set<String> WindowHandling2=driver.getWindowHandles();
+	  System.out.println(WindowHandling2.size());
+	  System.out.println(WindowHandling2);
+	 
+	  
+	  for (String window1 : WindowHandling2) {
+		
+		  if (driver.getTitle().contentEquals("Paytm Mall")) {
+			  
+			  driver.switchTo().window(window1);
+			 // driver.findElement(By.className("_4jhq img")).click();
+			  driver.findElement(By.xpath("//img[@class='_4jhq img']"))
+		}
+	}
+	  
+  }
+}

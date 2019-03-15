@@ -1,0 +1,19 @@
+package Keyword;
+
+public class SuperChild {
+	
+	int i=20;
+	
+	public void show(int i) {
+		
+		System.out.println(i);
+	}
+
+	public static void main(String[] args) {
+
+		SuperChild sc=new SuperChild();
+
+		
+	}
+
+}

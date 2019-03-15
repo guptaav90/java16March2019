@@ -1,0 +1,20 @@
+package constructor;
+
+public class parametrizedConstructor {
+
+	
+public parametrizedConstructor(String empName,int empId) {
+		
+	
+	}
+	public static void main(String[] args) {
+
+		Constructor c6=new Constructor("Tom", 201);
+		System.out.println("Employee 1st : "+ c6.empId+" "+c6.empName);
+		Constructor c7=new Constructor("Peter", 202);
+		System.out.println("Employee 2nd : "+c7.empId+" "+c7.empName);
+
+		
+	}
+
+}

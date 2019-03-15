@@ -1,0 +1,13 @@
+package string;
+
+public class Mmutable {
+
+	public static void main(String[] args) {
+
+
+		 StringBuffer str1=new StringBuffer("Selenium");
+		
+		
+	}
+
+}

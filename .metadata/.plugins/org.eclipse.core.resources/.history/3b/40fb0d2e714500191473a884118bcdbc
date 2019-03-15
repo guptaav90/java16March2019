@@ -1,0 +1,33 @@
+package Keyword;
+
+public class This {
+	
+	
+	int i;
+	String str ;
+	
+	public void display(int i, String str) {
+		
+		i=i;
+		str=str;
+		
+	}
+	
+	public void show() {
+		
+		System.out.println(i+" "+str);
+	}
+
+	public static void main(String[] args) {
+
+      This thi=new This();
+      System.out.println(thi.display(10, "Tom"));;
+      thi.show();
+      
+      
+		
+		
+		
+	}
+
+}

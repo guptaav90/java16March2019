@@ -1,0 +1,72 @@
+package ExceptionHandling;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Exception {
+
+	public static void main(String[] args)   {
+
+        //Checked exception ex:
+		//1. InterruptedException
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		System.out.println("JAVA");
+		
+		//2.IO Exception
+			
+			try {
+				FileInputStream fi=new FileInputStream("C:\\Users\\gupta.av\\eclipse-workspace\\0.1Automation\\src\\main\\java\\Exception");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+		//Unchecked exception ex:
+		//1.ArithmeticException
+			
+			int i=10;
+			
+			try {
+				int j=i/0;	
+			}
+			
+			catch(ArithmeticException e)
+			{
+				e.printStackTrace();
+				
+			}
+			
+		//2.
+			
+			
+			
+				
+				try {
+					FileInputStream fis=new FileInputStream("C:\\Users\\gupta.av\\eclipse-workspace\\0.1Automation\\src\\main\\java\\Exception");
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+	}
+
+}
